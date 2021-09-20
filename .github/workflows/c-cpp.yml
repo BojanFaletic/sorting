@@ -10,6 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install gtest
+        run: sudo apt-get install libgtest-dev
+
       - uses: actions/checkout@v2
       - name: make
         run: make
