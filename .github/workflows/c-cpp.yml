@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Install gtest
         run: sudo apt-get install libgtest-dev
-
       - uses: actions/checkout@v2
-      - name: make
+
+      - name: build tests
         run: make
+
+      - name: run tests
+        run: ./test
