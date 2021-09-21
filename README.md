@@ -11,3 +11,4 @@ make && ./test
 ## Implemented algorithms
 
 - Selection sort
+- Bubble sort

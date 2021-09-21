@@ -20,6 +20,14 @@ TEST(selection, swap){
 }
 
 
+TEST(bubble, sort)
+{
+    std::array<int, 3> vv{3, 1, 2};
+    bubble(vv);
+
+    std::array<int, 3> correct_vv{1, 2, 3};
+    EXPECT_EQ(vv, correct_vv);
+}
 
 int main(int argc, char* argv[])
 {

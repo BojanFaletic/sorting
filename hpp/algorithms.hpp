@@ -35,3 +35,17 @@ template <typename T> void selection(T &list) {
     start_iter++;
   }
 }
+
+// bubble sort algorithm: O(n^2)
+template <typename T> void bubble(T &list) {
+  using typ = typename T::iterator;
+
+  for (unsigned int i = 0; i < list.size() - 1; i++) {
+    for (typ first = list.begin(); first < list.end() - i - 1; first++) {
+      typ second = first + 1;
+      if (*second < *first) {
+        swap(*first, *second);
+      }
+    }
+  }
+}
