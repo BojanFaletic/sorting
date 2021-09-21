@@ -61,3 +61,22 @@ void bubble(T &list) {
     }
   }
 }
+
+// insertion sort algorithm: O(n^2)
+template <typename T>
+requires is_container<T>
+void insertion(T &list) {
+  using typ = decltype(list[0]);
+
+  for (unsigned int i = 0; i < list.size(); i++) {
+    typ key = *(list.begin() + i);
+    int j = i - 1;
+
+    // shift all elements forward to make space
+    while (j >= 0 && list[j] > key) {
+      *(list.begin() + j + i) = *(list + j);
+      j = j - 1;
+    }
+    *(list + j + 1) = key;
+  }
+}
