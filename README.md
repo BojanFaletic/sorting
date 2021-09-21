@@ -12,3 +12,5 @@ make && ./test
 
 - Selection sort
 - Bubble sort
+- Insertion sort
+- Merge sort

@@ -34,6 +34,14 @@ TEST(insertion, sort) {
   EXPECT_EQ(vv, correct_vv);
 }
 
+TEST(merge, sort) {
+  std::array<int, 3> vv{3, 1, 2};
+  merge(vv);
+
+  std::array<int, 3> correct_vv{1, 2, 3};
+  EXPECT_EQ(vv, correct_vv);
+}
+
 int main(int argc, char *argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
